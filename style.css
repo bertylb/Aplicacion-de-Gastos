@@ -1,0 +1,29 @@
+.body {
+    width: auto;
+    height: 100px;
+}
+.title {
+    color: rgb(42, 90, 179);
+    font-weight: bold;
+}
+.tarjeta {
+    /* background: red; */
+    margin: 0 7vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+.card-header{
+    font-weight: bold;
+}
+.label_importe, .label_descripcion {
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgb(42, 90, 179);
+}
+#error_importe, #error_descripcion{
+    display: none;
+    color: red;
+}

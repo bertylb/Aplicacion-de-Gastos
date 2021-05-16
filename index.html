@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Gastos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+</head>
+
+<body class="body">
+
+    <section class="container-sm min-vh-100 border border-2 my-2 px-lg-1 shadow-lg rounded" id="section">
+        
+        <div class="row justify-content-md-center">
+            <div class="col col-lg-6 d-flex justify-content-center my-4">
+                <h1 class="title">Aplicación de gastos</h1>
+            </div>
+        </div>
+        
+        <form action="" id="formulario" class="row g-3">
+            
+            <div class="row justify-content-lg-center my-4">
+                
+                <div class="col-12 col-lg-3 py-2 py-lg-0" id="grupo_importe">
+                    <label for="importe" id="label_importe" class="label_importe">Importe</label>
+                    <input id="importe" name="importe" type="text" value="" class="form-control" placeholder="Importe" aria-label="importe" autofocus>
+                    <p id="error_importe">El campo no puede estar vacío y debe contener solo números</p>
+                </div>
+
+                <div class="col col-sm-12 col-lg-7" id="grupo_descripcion">
+                    <label for="descripcion" id="label_descripcion" class="label_descripcion">Descripción</label>
+                    <input id="descripcion" name="descripcion" type="text" value="" class="form-control" placeholder="Descripcion" aria-label="descripcion" autofocus>
+                    <p id="error_descripcion">El campo no puede estar vacío y debe contener solo letras</p>
+                </div>
+
+            </div>
+            <button type="submit" class="btn btn-primary my-3 col-4 mx-auto" id="btn" disabled>Agregar</button>
+
+        </form>
+
+        <div id="card-box" class="d-flex align-items-center justify-content-around w-100 p-3"></div>
+
+        <div class="tarjeta">
+            <div class="card border-success mb-3" style="width: 30%;">
+                <div class="card-header">Saldo Ingresado</div>
+                <div class="card-body text-success">
+                  <h5 class="card-title" id="saldoIng"></h5>
+                </div>
+            </div>
+            <div id="card_currentAmount" class="card border-success mb-3" style="width: 30%;">
+                <div class="card-header">Saldo Actual</div>
+                <div id="text_currentAmount" class="card-body text-success">
+                  <h5 class="card-title" id="saldo"></h5>
+                </div>
+            </div>
+            <div class="card border-dark mb-3" style="width: 30%;">
+                <div class="card-header">Gasto Actual</div>
+                <div class="card-body text-dark">
+                  <h5 class="card-title" id="gasto"></h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center my-5 py-lg-0">
+            <div class="d-grid col-12 col-lg-6"> <!--en dispositivos menores a 960px las columnas son de 12. Mayores a eso columnas de 6-->
+                <ul class="list-group" id="lista">
+                </ul>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous">
+    </script>
+    <script type="module" src="app.js"></script>
+</body>
+
+</html>
